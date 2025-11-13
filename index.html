@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社システムデザインワークス - 会社紹介資料</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+            background: white;
+            margin-bottom: 20px;
+        }
+
+        section:nth-child(even) {
+            background: #fafafa;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #6bb937;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #6bb937;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            color: #6bb937;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .primary-color {
+            color: #6bb937;
+        }
+
+        /* 会社情報セクション */
+        .company-header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #6bb937 0%, #5aa328 100%);
+            color: white;
+            margin-bottom: 0;
+        }
+
+        .company-header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .company-header .tagline {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        .info-list {
+            max-width: 800px;
+            margin: 40px auto 0;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .info-list-item {
+            display: flex;
+            padding: 20px 0;
+            border-bottom: 1px solid #e0e0e0;
+            align-items: flex-start;
+        }
+
+        .info-list-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            min-width: 150px;
+            font-weight: 600;
+            color: #6bb937;
+            font-size: 1.1rem;
+            padding-right: 20px;
+        }
+
+        .info-value {
+            flex: 1;
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .clients-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .client-badge {
+            background: #f9f9f9;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: #333;
+            border: 1px solid #e0e0e0;
+            display: inline-block;
+        }
+
+        /* 会社概要セクション */
+        .overview-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .overview-content h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        .overview-content .subtitle {
+            font-size: 1.8rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .overview-content .description {
+            font-size: 1.2rem;
+            line-height: 2;
+            color: #555;
+        }
+
+        /* 事業内容セクション */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-left: 5px solid #6bb937;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .service-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .service-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .service-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #6bb937;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .service-detail {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .service-detail strong {
+            color: #6bb937;
+            font-size: 1.1rem;
+        }
+
+        /* Solutionセクション */
+        .solution-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f6f6f6;
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .solution-intro {
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+        .solution-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .solution-problem {
+            background: #f6f6f6;
+            border: 4px dotted #ccc;
+            padding: 16px;
+            border-radius: 12px;
+        }
+
+        .solution-answer {
+            background: white;
+            border: 4px dotted #6bb937;
+            padding: 16px;
+            border-radius: 12px;
+        }
+
+        .solution-problem p,
+        .solution-answer p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* 技術スタックセクション */
+        .tech-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #f6f6f6;
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        .tech-row {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px dotted #6bb937;
+            align-items: start;
+        }
+
+        .tech-row:last-child {
+            border-bottom: none;
+        }
+
+        .tech-category-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .tech-tag {
+            background: white;
+            color: #333;
+            padding: 6px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px dotted #6bb937;
+            display: inline-block;
+        }
+
+        /* 制作実績セクション */
+        .works-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .works-table-container {
+            max-width: 1000px;
+            margin: 20px auto 0;
+            background: white;
+            border-radius: 8px;
+            overflow-x: auto;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        .works-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .works-table thead {
+            background: #f5f5f5;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .works-table th {
+            padding: 10px 16px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .works-table td {
+            padding: 8px 16px;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+
+        .works-table tbody tr:hover {
+            background: #fafafa;
+        }
+
+        .works-table .category-badge {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #666;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .works-table-container {
+                overflow-x: scroll;
+            }
+
+            .works-table {
+                font-size: 0.85rem;
+            }
+
+            .works-table th,
+            .works-table td {
+                padding: 10px 12px;
+            }
+
+            .solution-row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .solution-content {
+                padding: 24px;
+            }
+
+            .info-list {
+                padding: 20px;
+            }
+
+            .info-list-item {
+                flex-direction: column;
+            }
+
+            .info-label {
+                min-width: auto;
+                margin-bottom: 8px;
+            }
+
+            .tech-content {
+                padding: 16px;
+            }
+
+            .tech-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 10px 0;
+            }
+
+            .tech-category-label {
+                font-size: 0.95rem;
+            }
+
+            .tech-tags {
+                gap: 6px;
+            }
+
+            .tech-tag {
+                padding: 5px 10px;
+                font-size: 0.8rem;
+            }
+
+            .company-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* スムーズスクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- セクション1: 会社情報 -->
+    <section>
+        <div class="container">
+            <h2>会社情報</h2>
+            <div class="info-list">
+                <div class="info-list-item">
+                    <div class="info-label">会社名</div>
+                    <div class="info-value">株式会社システムデザインワークス</div>
+                </div>
+                <div class="info-list-item">
+                    <div class="info-label">本社所在地</div>
+                    <div class="info-value">栃木県那須塩原市沓掛2-17-8 2F</div>
+                </div>
+                <div class="info-list-item">
+                    <div class="info-label">宇都宮営業所</div>
+                    <div class="info-value">宇都宮市駅前通り3丁目9-16 野沢ビル2F</div>
+                </div>
+                <div class="info-list-item">
+                    <div class="info-label">設立</div>
+                    <div class="info-value">2014年5月13日</div>
+                </div>
+                <div class="info-list-item">
+                    <div class="info-label">従業員数</div>
+                    <div class="info-value">7名</div>
+                </div>
+                <div class="info-list-item">
+                    <div class="info-label">取引先<span style="font-size: 0.9rem; color: #888; font-style: italic; font-weight: normal; margin-left: 8px;">（順不同）</span></div>
+                    <div class="info-value">
+                        株式会社クボタ／カゴメ株式会社／株式会社フジクラ／株式会社GOOD NEWS／株式会社東北システムズ・サポート／大栄産業株式会社／伊米ヶ崎建設株式会社 など
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- セクション2: 会社概要・理念 -->
+    <section>
+        <div class="container">
+            <div class="overview-content">
+                <h1><span class="primary-color">共に創り</span>、<span class="primary-color">共に育てる</span>システム</h1>
+                <p class="subtitle">変化にすぐに応える、高品質をスピーディーに</p>
+                <div class="description">
+                    <p>
+                        最新技術を活用した高品質なシステム開発を通じて、<br>
+                        お客様のビジネスをデジタルで支援する開発会社です。
+                    </p>
+                    <p style="margin-top: 30px;">
+                        「対応力」を武器に、「フットワークの軽い少数精鋭のチーム体制」で、<br>
+                        迅速にお悩みを一つずつ解決いたします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- セクション3: Solution -->
+    <section>
+        <div class="container">
+            <h2>システムデザインワークスで解決できること</h2>
+            <div class="solution-content">
+                <p class="solution-intro">"対応力"を武器に、"フットワークの軽い少数精鋭のチーム体制"で、迅速にお悩みを一つずつ解決いたします!</p>
+                <div class="solution-grid">
+                    <div class="solution-row">
+                        <div class="solution-problem">
+                            <p>予算が限られているけど、確実に納期を守ってほしい</p>
+                        </div>
+                        <div class="solution-answer">
+                            <p>無理のない価格設定で、スピーディーに開発を進めます</p>
+                        </div>
+                    </div>
+                    <div class="solution-row">
+                        <div class="solution-problem">
+                            <p>今の保守・メンテナンス業者の対応が遅くて困っている</p>
+                        </div>
+                        <div class="solution-answer">
+                            <p>お問い合わせやご依頼には、すぐにご対応いたします</p>
+                        </div>
+                    </div>
+                    <div class="solution-row">
+                        <div class="solution-problem">
+                            <p>品質が心配で頼んでいいか不安</p>
+                        </div>
+                        <div class="solution-answer">
+                            <p>経験豊富な国内エンジニアのみで構成されたチームです（実務経験5年以上）</p>
+                        </div>
+                    </div>
+                    <div class="solution-row">
+                        <div class="solution-problem">
+                            <p>まずは試作や簡易版を素早く作って検証したい</p>
+                        </div>
+                        <div class="solution-answer">
+                            <p>お話を伺った後、最短1か月で試作品をお作りします</p>
+                        </div>
+                    </div>
+                    <div class="solution-row">
+                        <div class="solution-problem">
+                            <p>ざっくりしたイメージからデザイン案を作ってほしい</p>
+                        </div>
+                        <div class="solution-answer">
+                            <p>ご要望をお聞きした後、最短3日でデザインモックを作成いたします</p>
+                        </div>
+                    </div>
+                    <div class="solution-row">
+                        <div class="solution-problem">
+                            <p>適正な価格で、長く安心して任せられるパートナーが欲しい</p>
+                        </div>
+                        <div class="solution-answer">
+                            <p>お客様の課題を一緒に考え、積極的に改善提案をしながらサポートします</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- セクション4: 事業内容・サービス -->
+    <section>
+        <div class="container">
+            <h2>事業内容・サービス</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h4>Service 1</h4>
+                    <h3>お客様の形態に合わせた<br>専用アプリの開発</h3>
+                    <p>業種や規模を問わず、お客様のビジネスモデルに最適化されたアプリケーションを開発・提供いたします。</p>
+                    <ul class="service-list">
+                        <li>Webアプリケーションの開発・DX改善<br><small style="color: #888;">既存システムの改善から新規開発まで、デジタル変革をサポートします</small></li>
+                        <li>AIの導入<br><small style="color: #888;">機械学習やAI技術を活用した業務効率化ソリューションを提供します</small></li>
+                        <li>FileMakerを使用した独自アプリケーションの開発<br><small style="color: #888;">FileMakerの認定Developer資格を活かした高品質なデータベースアプリを構築します</small></li>
+                        <li>ECサイトの開発<br><small style="color: #888;">売上向上を目指す、使いやすく安全なECサイトを構築します</small></li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h4>Service 2</h4>
+                    <h3>自社製品にも力を入れて<br>開発しています</h3>
+                    <p>高い技術力で高パフォーマンスの自社サービスを開発しました。</p>
+                    <div class="service-detail">
+                        <strong>ConPath</strong>
+                        <p style="margin-top: 10px; font-size: 1rem;">
+                            手書き感で作れる工程表管理WEBソフト<br>
+                            <a href="https://lp.conpath.jp/" target="_blank" style="color: #6bb937; text-decoration: none;">詳細を見る →</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- セクション5: 技術スタック・強み -->
+    <section>
+        <div class="container">
+            <h2>技術スタック・強み</h2>
+            <div class="tech-content">
+                <div class="tech-row">
+                    <div class="tech-category-label">OS</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">Android</span>
+                        <span class="tech-tag">iOS</span>
+                        <span class="tech-tag">Windows</span>
+                        <span class="tech-tag">MacOS</span>
+                    </div>
+                </div>
+
+                <div class="tech-row">
+                    <div class="tech-category-label">開発言語</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Go</span>
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">C#</span>
+                    </div>
+                </div>
+
+                <div class="tech-row">
+                    <div class="tech-category-label">フレームワーク/プラットフォーム</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">FileMaker</span>
+                        <span class="tech-tag">ECCUBE</span>
+                        <span class="tech-tag">Shopify</span>
+                    </div>
+                </div>
+
+                <div class="tech-row">
+                    <div class="tech-category-label">バックエンド/Cloud</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Firestore</span>
+                        <span class="tech-tag">Vercel</span>
+                        <span class="tech-tag">Vercel Blob Storage</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Amazon Lightsail</span>
+                        <span class="tech-tag">Microsoft Azure</span>
+                        <span class="tech-tag">Amazon S3</span>
+                        <span class="tech-tag">Google Cloud Platform</span>
+                        <span class="tech-tag">さくらのクラウド</span>
+                    </div>
+                </div>
+
+                <div class="tech-row">
+                    <div class="tech-category-label">認定資格</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Claris Partner</span>
+                        <span class="tech-tag">Adobe Certified Reseller</span>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.95rem; color: #666; line-height: 1.6;">
+                    FileMakerを取り扱う、Claris社の公式認定パートナーです。また、アドビ社が提供する製品の知識・実績が認められた、公式の販売代理店です。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- セクション6: 制作実績 -->
+    <section class="works-section">
+        <div class="container">
+            <h2>制作実績</h2>
+            <div class="works-table-container">
+                <table class="works-table">
+                    <thead>
+                        <tr>
+                            <th>過去事例</th>
+                            <th>業種</th>
+                            <th>カテゴリ</th>
+                            <th>プラットフォーム</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RFID棚卸アプリ</td>
+                            <td>製造業</td>
+                            <td><span class="category-badge">BtoB</span></td>
+                            <td>Android</td>
+                        </tr>
+                        <tr>
+                            <td>PC製造管理システム</td>
+                            <td>プレキャストメーカー</td>
+                            <td><span class="category-badge">BtoB</span></td>
+                            <td>FileMaker</td>
+                        </tr>
+                        <tr>
+                            <td>配送管理システム</td>
+                            <td>ガソリンスタンド</td>
+                            <td><span class="category-badge">BtoB</span></td>
+                            <td>FileMaker</td>
+                        </tr>
+                        <tr>
+                            <td>Access→FileMakerのリプレイス</td>
+                            <td>サービス業</td>
+                            <td><span class="category-badge">BtoB</span></td>
+                            <td>FileMaker</td>
+                        </tr>
+                        <tr>
+                            <td>Oracle→FileMakerのリプレイス</td>
+                            <td>製造業</td>
+                            <td><span class="category-badge">BtoB</span></td>
+                            <td>FileMaker</td>
+                        </tr>
+                        <tr>
+                            <td>提出書類管理、自動結合システム</td>
+                            <td>製造業</td>
+                            <td><span class="category-badge">BtoB</span></td>
+                            <td>WEBブラウザ</td>
+                        </tr>
+                        <tr>
+                            <td>給与計算システム</td>
+                            <td>サービス業</td>
+                            <td><span class="category-badge">BtoB</span></td>
+                            <td>WEBブラウザ</td>
+                        </tr>
+                        <tr>
+                            <td>ドライバー管理ソフト</td>
+                            <td>配送業</td>
+                            <td><span class="category-badge">BtoB</span></td>
+                            <td>WEBブラウザ</td>
+                        </tr>
+                        <tr>
+                            <td>ECショップ構築</td>
+                            <td>飲食業、小売業など</td>
+                            <td><span class="category-badge">BtoC</span></td>
+                            <td>WEBブラウザ</td>
+                        </tr>
+                        <tr>
+                            <td>POSレジ連動 会員・管理ポイントアプリ</td>
+                            <td>飲食業</td>
+                            <td><span class="category-badge">BtoC</span></td>
+                            <td>WEBブラウザ</td>
+                        </tr>
+                        <tr>
+                            <td>車査定申し込みサイト</td>
+                            <td>中古車販売</td>
+                            <td><span class="category-badge">BtoC</span></td>
+                            <td>WEBブラウザ</td>
+                        </tr>
+                        <tr>
+                            <td>クーポンアプリ</td>
+                            <td>ショッピングモール</td>
+                            <td><span class="category-badge">BtoC</span></td>
+                            <td>WEBブラウザ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
